@@ -1,3 +1,7 @@
+/*
+	TODO: write some documentation
+*/
+
 (function($) {
 	
 	$.notify = function(options) {
