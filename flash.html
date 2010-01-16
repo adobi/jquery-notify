@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<title>jQuery flash notification</title>
+		
+		<script type="text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script type="text/javascript" src = "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src = "jquery.notify.js"></script>
+		
+		<style type="text/css">
+			body {
+				margin: 0; padding:10px;
+				color:#444;
+				background: #fefefe;
+				font:12px Helvetica, Arial, sans-serif;
+			}
+			
+			.example {
+				border:1px solid #ccc;
+				padding:10px; margin:10px;
+				background: #f5f5f5;
+			}
+			
+			a {
+				color: #ff6908; text-decoration:none;font-size:1.2em; padding:3px;
+
+			}
+			
+			a:hover {
+				background: #ff6908; color:#fff;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<br /><br /><br />
+		<h1>jQuery flash notification plugin</h1>
+		
+		<div class = "example">
+			<a href="javascript:void(0);" class = "show-notification">show</a>
+		</div>
+		
+		<script type="text/javascript" charset="utf-8">
+			
+			$(document).ready(function() {
+
+				$('.show-notification').bind('click', function() {
+					
+					$.notify({
+						animation:false,
+						easing: '',
+						message:'hello world!', 
+						innerStyle: {
+							color: '#A9014B',
+							fontWeight: 'bold'
+						},
+						/*
+						outerStyle: {
+							border: '3px solid #ffcc66',	
+							'-moz-border-radius': '5px',
+							borderTop:'0px',
+							'-moz-border-radius-topleft': 0,
+							'-moz-border-radius-topright':0,
+							background: '#ffff99',
+							width: '400px',
+							marginLeft: '200px'
+							//position:'relative'
+						}
+						*/
+					});
+					
+					return false;
+				});
+			});
+		
+		</script>
+		
+	</body>
+</html>
