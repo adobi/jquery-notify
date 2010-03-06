@@ -22,6 +22,8 @@
 		}
 		else {
 			flash = $('.flash-message');
+			
+			flash.find('#msg').html(options.message);
 		}
 		
 		flash
@@ -36,7 +38,7 @@
 	
 	var build = function (options) {
 		
-		flash = $('<div></div>', { class: "flash-message"});
+		flash = $('<div></div>', { 'class': "flash-message"} );
 		
 		var flashCss = {
 			position: 'fixed',
@@ -57,7 +59,7 @@
 		
 		flashCss = $.extend({}, flashCss, options.outerStyle);
 		
-		var message = $('<div></div>');
+		var message = $('<div id = "msg"></div>');
 		
 		var messageCss = {};
 		messageCss = $.extend({}, messageCss, options.innerStyle);
